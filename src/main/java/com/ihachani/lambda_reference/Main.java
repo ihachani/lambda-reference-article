@@ -21,17 +21,27 @@ public class Main {
 
     public static void main(String[] argv) {
         oldWay();
+        lambdaWay();
     }
 
 
     public static void oldWay() {
         Speaker speaker = new Speaker(new Speech() {
             public void speak(String speech) {
-                System.out.println("Introduction " + speech);
+                System.out.println("Old way " + speech);
             }
         });
         speaker.talk();
     }
+
+    public static void lambdaWay() {
+        Speaker speaker = new Speaker((speech) -> {
+            System.out.println("Lambda " + speech);
+        }
+        );
+        speaker.talk();
+    }
+
 
 
 }

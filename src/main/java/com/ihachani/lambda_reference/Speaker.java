@@ -25,6 +25,6 @@ public class Speaker {
     }
 
     public void talk() {
-        speech.speak("A speech");
+        speech.speak(" speech");
     }
 }
