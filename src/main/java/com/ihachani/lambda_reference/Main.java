@@ -38,8 +38,7 @@ public class Main {
     public static void lambdaWay() {
         Speaker speaker = new Speaker((speech) -> {
             System.out.println("Lambda " + speech);
-        }
-        );
+        });
         speaker.talk();
     }
 
