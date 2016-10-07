@@ -1,0 +1,15 @@
+apply plugin: 'java'
+version = '1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13' //we want gradle 2.10 to run this project
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
