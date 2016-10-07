@@ -22,6 +22,7 @@ public class Main {
     public static void main(String[] argv) {
         oldWay();
         lambdaWay();
+        methodReferenceWay();
     }
 
 
@@ -43,5 +44,13 @@ public class Main {
     }
 
 
+    public static void methodReferenceWay() {
+        Speaker speaker = new Speaker(Main::speakMethod);
+        speaker.talk();
+    }
+
+    private static void speakMethod(String speech) {
+        System.out.println("Method Reference" + speech);
+    }
 
 }
